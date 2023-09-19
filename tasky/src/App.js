@@ -11,7 +11,7 @@ function App() {
       { id: 2, title: "Laundry", description: "Fold clothes and put away", deadline: "Tomorrow" },
       { id: 3, title: "Tidy up", deadline: "Today" },
       { id: 4, title: "Payment", deadline: "Next week" },
-      { id: 4, title: "Contact us",deadline: "Anytime", description: "xxxxxxxx@mail.wit.ie" }
+      { id: 5, title: "Contact us",deadline: "Anytime", description: "xxxxxxxx@mail.wit.ie" }
     ]
   });
 
