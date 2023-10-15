@@ -7,8 +7,22 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 const Task = (props) => {
+    const getPriorityColor = (priority) => {
+        switch (priority) {
+          case 'Low':
+            return '#45821A'; 
+          case 'Medium':
+            return '#CAAA3B'; 
+          case 'High':
+            return '#D92424'; 
+          default:
+            return 'defaultColor'; 
+        }
+    };
     
     return (
         <Grid
@@ -44,6 +58,16 @@ const Task = (props) => {
                   Due: {props.deadline}
               </Typography>
               </Box>
+              <Stack alignItems="center" spacing={1}>
+                <Stack direction="row">
+                  <Chip label= {props.priority} 
+                    style={{
+                      backgroundColor: getPriorityColor(props.priority),
+                      color: 'white'
+                  }}
+                  />
+                </Stack>
+              </Stack>
               <Typography
                   component="p"
                   variant="subtitle1"
